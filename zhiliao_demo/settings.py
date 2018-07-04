@@ -22,6 +22,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'u#v#jdz1w6qr!j!&hj(1g#ruv5cy=qanepq9x58u=0d4!x#hc3'
 
+# 添加域名或id地址，访问时只能通过allowed_hosts中的方式访问
+ALLOWED_HOSTS = ['zhiliaodemo.cn', 'www.zhiliaodemo.cn', '192.168.3.64']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -87,7 +89,7 @@ DATABASES = {
         'NAME': 'zhiliao_demo',
         'HOST': '127.0.0.1',
         'PORT': '3306',
-        'USER': 'root',
+        'USER': 'debian-sys-maint',
         'PASSWORD': 'root'
     }
 }

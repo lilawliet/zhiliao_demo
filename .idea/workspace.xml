@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="707b4653-394e-40eb-ad02-812c8dce445b" name="Default" comment="" />
+    <list default="true" id="707b4653-394e-40eb-ad02-812c8dce445b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zhiliao_demo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhiliao_demo/settings.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,11 +74,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news_category.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="news_category.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/src/js/news_category.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
               <caret line="75" column="28" lean-forward="true" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zhiliao_demo/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="25" column="72" lean-forward="true" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -149,6 +162,9 @@
       <find>add-btn</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -177,7 +193,6 @@
         <option value="$PROJECT_DIR$/utlis/captcha.py" />
         <option value="$PROJECT_DIR$/utlis/aliyunsdk/aliyunsms.py" />
         <option value="$PROJECT_DIR$/front/src/css/common/auth.scss" />
-        <option value="$PROJECT_DIR$/zhiliao_demo/settings.py" />
         <option value="$PROJECT_DIR$/apps/my_auth/urls.py" />
         <option value="$PROJECT_DIR$/front/src/js/index.js" />
         <option value="$PROJECT_DIR$/apps/my_auth/views.py" />
@@ -203,6 +218,7 @@
         <option value="$PROJECT_DIR$/front/src/js/message.js" />
         <option value="$PROJECT_DIR$/front/src/js/ajax.js" />
         <option value="$PROJECT_DIR$/front/src/js/news_category.js" />
+        <option value="$PROJECT_DIR$/zhiliao_demo/settings.py" />
       </list>
     </option>
   </component>
@@ -232,12 +248,13 @@
       <path value="$PROJECT_DIR$/front/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1090" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -452,15 +469,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32905984" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5013405" side_tool="true" weight="0.33333334" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="11" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.33333334" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.33380884" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18297587" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -769,13 +786,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/dist/js/my_alert.js" />
-    <entry file="file://$PROJECT_DIR$/zhiliao_demo/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2142">
-          <caret line="119" selection-start-line="119" selection-end-line="119" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
@@ -866,6 +876,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="75" column="28" lean-forward="true" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhiliao_demo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="25" column="72" lean-forward="true" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
         </state>
       </provider>
     </entry>
