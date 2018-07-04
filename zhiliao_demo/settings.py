@@ -23,7 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'u#v#jdz1w6qr!j!&hj(1g#ruv5cy=qanepq9x58u=0d4!x#hc3'
 
 # 添加域名或id地址，访问时只能通过allowed_hosts中的方式访问
-ALLOWED_HOSTS = ['zhiliaodemo.cn', 'www.zhiliaodemo.cn', '192.168.3.64']
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['zhiliaodemo.cn', 'www.zhiliaodemo.cn', '192.168.3.64']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -88,7 +89,7 @@ DATABASES = {
         'NAME': 'zhiliao_demo',
         'HOST': '127.0.0.1',
         'PORT': '3306',
-        'USER': 'debian-sys-maint',
+        'USER': 'root',
         'PASSWORD': 'root'
     }
 }
@@ -142,6 +143,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'front', 'dist')
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
 
 ######################## aliyun ########################
 # ACCESS_KEY_ID/ACCESS_KEY_SECRET 根据实际申请的账号信息进行替换
