@@ -27,7 +27,6 @@ ALLOWED_HOSTS = ['zhiliaodemo.cn', 'www.zhiliaodemo.cn', '192.168.3.64']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
 
 
 # Application definition
