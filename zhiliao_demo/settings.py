@@ -28,6 +28,16 @@ SECRET_KEY = 'u#v#jdz1w6qr!j!&hj(1g#ruv5cy=qanepq9x58u=0d4!x#hc3'
 ############################### 开发环境 ###############################
 # ALLOWED_HOSTS = []
 # DEBUG = True
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'zhiliao_demo',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#         'USER': 'root',
+#         'PASSWORD': 'root'
+#     }
+# }
 
 ########################################################################
 ############################### 生产环境 ###############################
@@ -35,6 +45,16 @@ SECRET_KEY = 'u#v#jdz1w6qr!j!&hj(1g#ruv5cy=qanepq9x58u=0d4!x#hc3'
 ALLOWED_HOSTS = ['zhiliaodemo.cn', 'www.zhiliaodemo.cn', '192.168.3.64']
 DEBUG = False
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'zhiliao_demo',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'USER': 'admin',
+        'PASSWORD': 'root'
+    }
+}
 ########################################################################
 
 
@@ -91,16 +111,7 @@ WSGI_APPLICATION = 'zhiliao_demo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'zhiliao_demo',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'USER': 'root',
-        'PASSWORD': 'root'
-    }
-}
+
 
 
 # Password validation
