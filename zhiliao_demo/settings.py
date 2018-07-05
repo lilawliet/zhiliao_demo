@@ -42,7 +42,7 @@ SECRET_KEY = 'u#v#jdz1w6qr!j!&hj(1g#ruv5cy=qanepq9x58u=0d4!x#hc3'
 ########################################################################
 ############################### 生产环境 ###############################
 # 添加域名或id地址，访问时只能通过allowed_hosts中的方式访问
-ALLOWED_HOSTS = ['zhiliaodemo.cn', 'www.zhiliaodemo.cn', '192.168.3.64']
+ALLOWED_HOSTS = ['192.168.3.64']
 DEBUG = False
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
 DATABASES = {
