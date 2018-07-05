@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="707b4653-394e-40eb-ad02-812c8dce445b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static_dist/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/zhiliao_demo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/zhiliao_demo/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,8 +74,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zhiliao_demo/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="145" column="48" selection-start-line="145" selection-start-column="48" selection-end-line="145" selection-end-column="48" />
+            <state relative-caret-position="381">
+              <caret line="145" column="49" selection-start-line="145" selection-start-column="49" selection-end-line="145" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -264,26 +265,6 @@
           <expand>
             <path>
               <item name="zhiliao_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhiliao_demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhiliao_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhiliao_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="front" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhiliao_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhiliao_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="static_dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhiliao_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhiliao_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="utlis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhiliao_demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhiliao_demo" type="462c0819:PsiDirectoryNode" />
               <item name="zhiliao_demo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -786,8 +767,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zhiliao_demo/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="145" column="48" selection-start-line="145" selection-start-column="48" selection-end-line="145" selection-end-column="48" />
+        <state relative-caret-position="381">
+          <caret line="145" column="49" selection-start-line="145" selection-start-column="49" selection-end-line="145" selection-end-column="49" />
         </state>
       </provider>
     </entry>

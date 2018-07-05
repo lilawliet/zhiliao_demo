@@ -143,7 +143,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'front', 'dist')
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'front/dist')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
 
 ######################## aliyun ########################
 # ACCESS_KEY_ID/ACCESS_KEY_SECRET 根据实际申请的账号信息进行替换
