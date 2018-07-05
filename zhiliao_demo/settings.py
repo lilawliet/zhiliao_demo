@@ -26,7 +26,7 @@ SECRET_KEY = 'u#v#jdz1w6qr!j!&hj(1g#ruv5cy=qanepq9x58u=0d4!x#hc3'
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['zhiliaodemo.cn', 'www.zhiliaodemo.cn', '192.168.3.64']
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = False
 
 
 
