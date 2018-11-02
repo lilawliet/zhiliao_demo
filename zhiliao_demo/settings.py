@@ -26,35 +26,35 @@ SECRET_KEY = 'u#v#jdz1w6qr!j!&hj(1g#ruv5cy=qanepq9x58u=0d4!x#hc3'
 
 
 ############################### 开发环境 ###############################
-# ALLOWED_HOSTS = []
-# DEBUG = True
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'zhiliao_demo',
-#         'HOST': '127.0.0.1',
-#         'PORT': '3306',
-#         'USER': 'root',
-#         'PASSWORD': 'root'
-#     }
-# }
-
-########################################################################
-############################### 生产环境 ###############################
-# 添加域名或id地址，访问时只能通过allowed_hosts中的方式访问
-ALLOWED_HOSTS = ['192.168.3.64']
-DEBUG = False
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
+ALLOWED_HOSTS = []
+DEBUG = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'zhiliao_demo',
         'HOST': '127.0.0.1',
         'PORT': '3306',
-        'USER': 'admin',
+        'USER': 'root',
         'PASSWORD': 'root'
     }
 }
+INTERNAL_IPS = ['127.0.0.1']
+########################################################################
+############################### 生产环境 ###############################
+# 添加域名或id地址，访问时只能通过allowed_hosts中的方式访问
+# ALLOWED_HOSTS = ['192.168.3.64']
+# DEBUG = False
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'zhiliao_demo',
+#         'HOST': '127.0.0.1',
+#         'PORT': '3306',
+#         'USER': 'admin',
+#         'PASSWORD': 'root'
+#     }
+# }
 ########################################################################
 
 
@@ -67,12 +67,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
     'apps.my_auth',
     'apps.cms',
     'apps.news',
+    'apps.ueditor',
+    'rest_framework',
+    'apps.course'
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -140,6 +145,7 @@ CACHES = {
 }
 
 
+
 AUTH_USER_MODEL = 'my_auth.User'
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
@@ -152,16 +158,44 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = False
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+
+### 静态文件配置
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'front', 'dist')
 ]
+
+### 上传文件配置
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+### Ueditor 配置
+UEDITOR_UPLOAD_TO_SERVER = True
+UEDITOR_UPLOAD_PATH = MEDIA_ROOT
+UEDITOR_CONFIG_PATH = os.path.join(BASE_DIR, 'front', 'dist', 'ueditor', 'config.json')
+
+
+########## Ueditor 上传到qiniu ###########
+QINIU_ACCESS_KEY = 'SPwQUno2ZyL8mE7IT6hu1ONY9JpXMziy3JkP5Mfi'
+QINIU_SECRET_KEY = 'hB94y1Q_kbMxVr2Jh_ygeRmenHLXuAztMjHb'
+QINIU_BUCKET_NAME = 'mystorage'
+QINIU_DOMAIN = ''
+
+"""
+UEDITOR_UPLOAD_TO_QINIU = True
+UEDITOR_QINIU_ACCESS_KEY = QINIU_ACCESS_KEY
+UEDITOR_QINIU_SECRET_KEY = QINIU_SECRET_KEY
+UEDITOR_QINIU_BUCKET_NAME = QINIU_BUCKET_NAME
+UEDITOR_QINIU_DOMAIN = QINIU_DOMAIN
+###########################################
+"""
 
 ######################## aliyun ########################
 # ACCESS_KEY_ID/ACCESS_KEY_SECRET 根据实际申请的账号信息进行替换
@@ -170,3 +204,45 @@ ACCESS_KEY_SECRET = "H0qf4BJJvJdT2FUHxUKMXCUZK6jIrs"
 SIGN_NAME = 'hpw'
 TEMPLATE_CODE = 'SMS_138490221'  # 模板名称
 PHONE_NUMBER = '13580111402'
+
+# 新闻首页每次加载文章数量
+LOAD_NEWS_COUNT = 2
+
+# debug-toolbar 展示项配置
+DEBUG_TOOLBAR_PANELS = [
+    # django 版本信息
+    'debug_toolbar.panels.versions.VersionsPanel',
+    # 计时器
+    'debug_toolbar.panels.timer.TimerPanel',
+    # django 配置信息
+    'debug_toolbar.panels.settings.SettingsPanel',
+    # 请求头和响应头
+    'debug_toolbar.panels.headers.HeadersPanel',
+    # 请求响应信息（视图函数，Cookie信息，session信息）
+    'debug_toolbar.panels.request.RequestPanel',
+    # SQL
+    'debug_toolbar.panels.sql.SQLPanel',
+    # 静态文件
+    'debug_toolbar.panels.staticfiles.StaticFilesPanel',
+    # 模板文件
+    'debug_toolbar.panels.templates.TemplatesPanel',
+    # 缓存
+    'debug_toolbar.panels.cache.CachePanel',
+    # 信号
+    'debug_toolbar.panels.signals.SignalsPanel',
+    # 日志
+    'debug_toolbar.panels.logging.LoggingPanel',
+    # 重定向
+    'debug_toolbar.panels.redirects.RedirectsPanel',
+]
+
+
+DEBUG_TOOLBAR_CONFIG = {
+    # 默认加载谷歌jQuery库，设为空则加载本地jQuery库
+    'JQUERY_URL': '',
+
+}
+
+# 百度云播放器配置
+BAIDU_CLOUD_USER_ID = '39636506cc3d4410ad07f0440a17f07d'
+BAIDU_CLOUD_USER_KEY = 'fbc06a6cb21c49b1'

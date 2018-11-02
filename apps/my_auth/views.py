@@ -3,7 +3,7 @@ from django.views.decorators.http import require_POST
 from .forms import LoginForm, RegistForm
 from utlis import restful, captcha
 from utlis.aliyunsdk import aliyunsms
-from django.shortcuts import redirect, reverse
+from django.shortcuts import redirect, reverse, render
 from io import BytesIO
 from django.http import HttpResponse
 from django.core.cache import cache
@@ -94,3 +94,4 @@ def cache_test(request):
     result = cache.get('username')
     print(result)
     return HttpResponse('1')
+

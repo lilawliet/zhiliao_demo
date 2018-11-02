@@ -207,3 +207,42 @@ $(function(){
     var frontBase = new FrontBase();
     frontBase.run();
 })
+
+
+$(function () {
+    if (window.template) {
+        template.defaults.imports.dateFormat = function (dateValue) {
+            var date = new Date(dateValue);
+            var datetimestamp = date.getTime();
+            var nowtimestamp = (new Date()).getTime();
+            var timestamp = (nowtimestamp - datetimestamp) / 1000; // 得到秒数
+            if (timestamp < 60) {
+                return '刚刚'
+            }
+            else if (timestamp >= 60 && timestamp < 60 * 60) {
+                var minutes = parseInt(timestamp / 60);
+                return minutes + '分钟前';
+            }
+            else if (timestamp >= 60 * 60 && timestamp < 60 * 60 * 24) {
+                var hours = parseInt(timestamp / 60 / 60);
+                return hours + '小时前';
+            }
+            else if (timestamp >= 60 * 60 * 24 && timestamp < 60 * 60 * 24 * 30) {
+                var days = parseInt(timestamp / 60 / 60 / 24);
+                return days + '天前';
+            } else {
+                var year = date.getFullYear();
+                var month = date.getMonth();
+                var day = date.getDate();
+                var hour = date.getHours();
+                var minute = date.getMinutes();
+                var second = date.getSeconds();
+                return year + '/' + month + '/' + day + ' ' + hour + ':' + minute + ':' + second;
+            }
+
+
+        }
+    }else{
+        console.log('arttemplate出错')
+    }
+})
